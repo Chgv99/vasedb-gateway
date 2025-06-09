@@ -3,10 +3,10 @@ spring:
     gateway:
       routes:
         - id: api-service
-          uri: ${VASEDB_API_PRIVATE_IP}  # Private IP of EC2-1
+          uri: http://${VASEDB_API_PRIVATE_IP}  # Private IP of EC2-1
           predicates:
             - Host=${VASEDB_API_DOMAIN}
         - id: metabase-service
-          uri: ${METAVASE_PRIVATE_IP}  # Private IP of EC2-2
+          uri: http://${METAVASE_PRIVATE_IP}  # Private IP of EC2-2
           predicates:
             - Host=${METAVASE_DOMAIN}
