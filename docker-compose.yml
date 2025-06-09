@@ -1,0 +1,15 @@
+services:
+  vasedapi:
+    image: chgv99/vasedb-gateway:latest
+    container_name: vasedb-gateway
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:8080" #HTTP
+      - "443:8443" #HTTPS
+    environment:
+      SPRING_PROFILES_ACTIVE: prod
+
+volumes:
+  postgresql_data:
