@@ -34,7 +34,7 @@ jobs:
             mkdir -p /home/ubuntu/vasedb-gateway
             cd /home/ubuntu/vasedb-gateway
           
-            echo "VASEDB_API_PRIVATE_IP=${{ secrets.VASED_API_PRIVATE_IP }}" > .env
+            echo "VASEDB_API_PRIVATE_IP=${{ secrets.VASEDB_API_PRIVATE_IP }}" > .env
             echo "VASEDB_API_DOMAIN=${{ secrets.VASEDB_API_DOMAIN }}" >> .env
             echo "METAVASE_PRIVATE_IP=${{ secrets.METAVASE_PRIVATE_IP }}" >> .env
             echo "METAVASE_DOMAIN=${{ secrets.METAVASE_DOMAIN }}" >> .env
