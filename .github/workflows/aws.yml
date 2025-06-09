@@ -44,6 +44,6 @@ jobs:
             echo "VASEDB_API_PER_IP_CAP=${{ secrets.VASEDB_API_PER_IP_CAP }}" >> .env
             echo "VASEDB_API_PER_IP_TIME=${{ secrets.VASEDB_API_PER_IP_TIME }}" >> .env
             echo "VASEDB_API_PER_IP_TIME_UNIT=${{ secrets.VASEDB_API_PER_IP_TIME_UNIT }}" >> .env
-          
+            cat .env
             docker compose pull
             docker compose up -d
