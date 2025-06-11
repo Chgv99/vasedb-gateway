@@ -6,6 +6,9 @@ spring:
           uri: http://${VASEDB_API_PRIVATE_IP}  # Private IP of EC2-1
           predicates:
             - Host=${VASEDB_API_DOMAIN}
+          filters:
+            - PreserveHostHeader()
+            - AddRequestHeader=Authorization, #{request.headers['Authorization']?[0]}
         - id: metabase-service
           uri: http://${METAVASE_PRIVATE_IP}  # Private IP of EC2-2
           predicates:
