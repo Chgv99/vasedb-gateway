@@ -3,12 +3,11 @@ spring:
     gateway:
       routes:
         - id: api-service
-          uri: http://${VASEDB_API_PRIVATE_IP}  # Private IP of EC2-1
+          uri: http://${VASEDB_API_PRIVATE_IP}:8080  # Private IP of EC2-1
           predicates:
             - Host=${VASEDB_API_DOMAIN}
           filters:
-            - PreserveHostHeader()
-            - AddRequestHeader=Authorization, #{request.headers['Authorization']?[0]}
+            - PreserveHostHeader
         - id: metabase-service
           uri: http://${METAVASE_PRIVATE_IP}  # Private IP of EC2-2
           predicates:
