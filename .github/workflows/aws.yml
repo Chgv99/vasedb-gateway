@@ -35,9 +35,9 @@ jobs:
             cd /home/ubuntu/vasedb-gateway
           
             echo "VASEDB_API_PRIVATE_IP=${{ secrets.VASEDB_API_PRIVATE_IP }}" > .env
-            echo "VASEDB_API_DOMAIN=${{ secrets.VASEDB_API_DOMAIN }}" >> .env
+            echo "VASEDB_API_DOMAIN=${{ vars.VASEDB_API_DOMAIN }}" >> .env
             echo "METAVASE_PRIVATE_IP=${{ secrets.METAVASE_PRIVATE_IP }}" >> .env
-            echo "METAVASE_DOMAIN=${{ secrets.METAVASE_DOMAIN }}" >> .env
+            echo "METAVASE_DOMAIN=${{ vars.METAVASE_DOMAIN }}" >> .env
             echo "VASEDB_API_LISTEN_PORT=${{ secrets.VASEDB_API_LISTEN_PORT }}" >> .env
             echo "VASEDB_API_KEY=${{ secrets.VASEDB_API_KEY }}" >> .env
             echo "VASEDB_CLIENT_URL=${{ secrets.VASEDB_CLIENT_URL }}" >> .env
