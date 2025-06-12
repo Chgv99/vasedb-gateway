@@ -6,6 +6,7 @@ spring:
           uri: http://${VASEDB_API_PRIVATE_IP}:8080  # Private IP of EC2-1
           predicates:
             - Host=${VASEDB_API_DOMAIN}
+            - Path=/api/**
           filters:
             - PreserveHostHeader
         - id: metabase-service
