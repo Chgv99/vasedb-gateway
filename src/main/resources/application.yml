@@ -3,7 +3,7 @@ spring:
     gateway:
       routes:
         - id: api-service
-          uri: http://${VASEDB_API_PRIVATE_IP}:8080  # Private IP of EC2-1
+          uri: http://${VASEDB_API_PRIVATE_IP}  # Private IP of EC2-1
           predicates:
             - Host=${VASEDB_API_DOMAIN}
             - Path=/api/**
