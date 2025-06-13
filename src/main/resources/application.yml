@@ -13,3 +13,6 @@ spring:
           uri: http://${METAVASE_PRIVATE_IP}:3000  # Private IP of EC2-2
           predicates:
             - Host=${METAVASE_DOMAIN}
+          filters:
+            - PreserveHostHeader
+            - StripPrefix=0
