@@ -10,6 +10,6 @@ spring:
           filters:
             - PreserveHostHeader
         - id: metabase-service
-          uri: http://${METAVASE_PRIVATE_IP}  # Private IP of EC2-2
+          uri: http://${METAVASE_PRIVATE_IP}:3000  # Private IP of EC2-2
           predicates:
             - Host=${METAVASE_DOMAIN}
