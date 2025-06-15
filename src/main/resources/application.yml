@@ -15,4 +15,4 @@ spring:
             - Host=${METAVASE_DOMAIN}
           filters:
             - PreserveHostHeader
-            - StripPrefix=0
+            - RewritePath=/(.*), /$1
